@@ -1,37 +1,52 @@
 <script lang="ts">
-	import About from '$lib/components/About/About.svelte';
-	import OtherSupply from '$lib/components/Articles/OtherSupply/OtherSupply.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import UtilityData from '$lib/components/UtilityData.svelte';
+	import WorkNav from '$lib/components/WorkNav.svelte';
 </script>
 
 <div class="app">
+	<UtilityData></UtilityData>
 	<main>
-		<section id="about">
-			<About></About>
-		</section>
-		<section id="article">
-			<OtherSupply></OtherSupply>
-		</section>
+		<header>
+			<h1>Kyle Conkright</h1>
+		</header>
+		<WorkNav></WorkNav>
 	</main>
-	<!-- <footer></footer> -->
+	<footer>
+		<Footer></Footer>
+	</footer>
 </div>
 
 <style>
 	div.app {
 		min-height: 100dvh;
 		display: grid;
-		grid-template-columns: var(--page-grid);
+		grid-template-columns: var(--page-grid-columns);
+		grid-template-rows: [utility-start] min-content [utility-end main-start] 1fr [main-end footer-start] min-content [footer-end];
 		column-gap: var(--page-grid-gap);
 	}
+
 	main {
-		height: 100%;
-		grid-column: full;
+		grid-column: content;
+		grid-row: main;
 		display: grid;
+		grid-template-rows: 1fr min-content;
 		grid-template-columns: subgrid;
+		background: var(--grain), light-dark(var(--bg), var(--black));
+		border-radius: 0.625rem;
+		corner-shape: squircle;
+		padding: var(--space-2);
+		margin-inline: calc(var(--space-2) * -1);
 	}
 
-	section#about,
-	section#article {
-		min-height: 100dvh;
-		grid-column: full;
+	header {
+		grid-column: content;
+	}
+
+	footer {
+		grid-row: footer;
+		grid-column: content;
+		display: grid;
+		grid-template-columns: subgrid;
 	}
 </style>

@@ -1,0 +1,10 @@
+:root {
+	color-scheme: light dark;
+	--bg: oklch(0.57 0.14 274.06);
+	--black: oklch(20.687% 0.00986 285.48);
+	--soft-black: oklch(0.37 0.02 0.35);
+	--white: oklch(0.98 0.01 0);
+
+	--space-1: 1rem;
+	--space-2: 1.625rem;
+}

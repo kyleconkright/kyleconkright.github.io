@@ -1,21 +1,13 @@
 @import './styles/typography.css';
+@import './styles/variables.css';
 
 :root {
-	color-scheme: light dark;
-	--pickled-bluewood: oklch(0.3762 0.0521 258.29);
-	--swans-down: oklch(0.9384 0.0233 190.16);
-	--almost-white: oklch(0.98 0.01 0);
-	--beige: oklch(0.96 0 0);
-	--blue: oklch(0.55 0.15 249.15);
-
-	--orange: #ee7d32;
-	--peach: #eec599;
-
 	--grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.25'/%3E%3C/svg%3E");
 
 	--page-grid-gap: 1rem;
 	--page-gutter: 1rem;
-	--page-grid: [full-start] minmax(var(--page-gutter), 1fr) [content-start]
+	--page-grid-breakout: 1rem;
+	--page-grid-columns: [full-start] minmax(var(--page-gutter), 1fr) [content-start]
 		repeat(12, minmax(0, 1fr)) [content-end] minmax(var(--page-gutter), 1fr) [full-end];
 }
 
@@ -32,7 +24,7 @@ html {
 }
 
 body {
-	font-family: 'Archivo-Variable', Helvetica, Arial, sans-serif;
-	background: light-dark(var(--swans-down), var(--pickled-bluewood));
-	color: light-dark(var(--pickled-bluewood), var(--swans-down));
+	font-family: 'NeueMontreal', Helvetica, Arial, sans-serif;
+	background: var(--grain), light-dark(var(--white), var(--black));
+	color: light-dark(var(--black), var(--white));
 }
