@@ -4,6 +4,14 @@
 	import WorkNav from '$lib/components/WorkNav.svelte';
 </script>
 
+<svelte:head>
+	<title>Kyle Conkright — UX/UI Engineer</title>
+	<meta
+		name="description"
+		content="Kyle Conkright is a UX/UI engineer in Los Angeles. Currently at Splice; previously HitRecord, Event Farm, and Hulu."
+	/>
+</svelte:head>
+
 <div class="app">
 	<UtilityData></UtilityData>
 	<main>
