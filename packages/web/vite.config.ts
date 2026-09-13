@@ -26,6 +26,12 @@ export default defineConfig({
 			adapter: adapter({
 				fallback: '404.html'
 			}),
+
+			prerender: {
+				// The work nav links to sections that are still commented out in
+				// Content.svelte. Warn rather than fail until they land.
+				handleMissingId: 'warn'
+			},
 			preprocess: vitePreprocess()
 		})
 	],

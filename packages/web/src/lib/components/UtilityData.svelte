@@ -24,7 +24,7 @@
 	li {
 		color: var(--soft-black);
 		font-weight: 600;
-		font-size: var(--font-sm);
+		font-size: var(--text-s1);
 		grid-column: span 3;
 	}
 </style>

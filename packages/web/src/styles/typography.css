@@ -3,7 +3,21 @@ TYPOGRAPHY
 */
 
 :root {
-	--font-sm: 0.825rem;
+	--text-s2: 0.725rem;
+	--text-s1: 0.825rem;
+
+	--text-s5: 0.402rem;
+	--text-s4: 0.483rem;
+	--text-s3: 0.579rem;
+	--text-s2: 0.694rem;
+	--text-s1: 0.833rem;
+	--text-base: 1rem;
+	--text-h6: 1.2rem;
+	--text-h5: 1.44rem;
+	--text-h4: 1.728rem;
+	--text-h3: 2.074rem;
+	--text-h2: 2.488rem;
+	--text-h1: 2.986rem;
 }
 
 * {

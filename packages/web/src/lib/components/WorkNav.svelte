@@ -1,23 +1,27 @@
+<script lang="ts">
+	import { current, previous } from '$lib/data/sections';
+</script>
+
 <dl>
 	<div>
 		<dt>Current</dt>
 		<dd></dd>
-		<dd><a href="#">Splice</a></dd>
+		{#each current as section (section.id)}
+			<dd><a href="#{section.id}">{section.label}</a></dd>
+		{/each}
 	</div>
 	<div>
 		<dt>Previous</dt>
-		<dd><a href="#">HitRecord</a></dd>
-		<dd><a href="#">Event Farm</a></dd>
-		<dd><a href="#">Hulu</a></dd>
-		<dd>Tour Manager</dd>
-		<dd>Highlights</dd>
-		<dd>Lowlights</dd>
+		{#each previous as section (section.id)}
+			<dd><a href="#{section.id}">{section.label}</a></dd>
+		{/each}
 	</div>
 </dl>
 
 <style>
 	dl {
-		grid-column: content;
+		grid-column: 1 / 4;
+		grid-row: 2;
 		display: grid;
 		gap: var(--page-grid-gap);
 		grid-template-columns: subgrid;

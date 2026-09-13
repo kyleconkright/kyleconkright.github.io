@@ -39,7 +39,7 @@
 
 <style>
 	ul {
-		font-size: var(--font-sm);
+		font-size: var(--text-s1);
 		grid-column: content;
 		display: grid;
 		grid-template-columns: subgrid;
@@ -47,7 +47,9 @@
 	}
 	li {
 		grid-column: span 3;
-		font-weight: 600;
 		color: var(--soft-black);
+	}
+	a {
+		font-weight: 600;
 	}
 </style>
