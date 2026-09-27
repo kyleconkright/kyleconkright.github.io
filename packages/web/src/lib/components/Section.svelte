@@ -5,7 +5,7 @@
 
 	interface Props {
 		id: string;
-		/** Rendered into the animated ClashDisplay heading. */
+		/** Rendered into the animated Antonio heading. */
 		title: Snippet;
 		/** See ScrollTitle: 'load' is for the section already in view on arrival. */
 		reveal?: 'scroll' | 'load';
@@ -16,7 +16,9 @@
 </script>
 
 <section {id}>
-	<ScrollTitle {reveal}>{@render title()}</ScrollTitle>
+	<header>
+		<ScrollTitle {reveal}>{@render title()}</ScrollTitle>
+	</header>
 	{#if children}
 		<div class="body">{@render children()}</div>
 	{/if}
@@ -24,7 +26,6 @@
 
 <style>
 	section {
-		/* Fills the scrollport, and grows past it when the copy is longer. */
 		min-height: 100%;
 		display: grid;
 		grid-template-rows: 1fr min-content;
